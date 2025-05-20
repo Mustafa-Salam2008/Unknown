@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enter the Code</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding-top: 100px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      background-color: #fff;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+    }
+    input::placeholder {
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>enter the code</h2>
+  <input type="text" id="codeInput" placeholder="enter code here">
+  <br>
+  <button onclick="checkCode()">enter</button>
+
+  <p id="message" style="color:red; margin-top:20px;"></p>
+
+  <script>
+    function checkCode() {
+      var code = document.getElementById("codeInput").value;
+      var correctCode = "4077";
+      var link = "https://drive.google.com/file/d/16lVYfGJ5j3KAVHTO08facB1YiVv_9qhI/view?usp=drivesdk"
+
+      if(code === correctCode) {
+        window.location.href = link;
+      } else {
+        document.getElementById("message").textContent = "incorrect code!";
+      }
+    }
+  </script>
+
+</body>
+</html>
